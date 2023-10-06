@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Auto Clock-In",
+    "version": "1.0",
+    "permissions": ["activeTab", "http://connections.darwinbox.in/*", "alarms"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://connections.darwinbox.in/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
